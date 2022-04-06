@@ -22,7 +22,7 @@ The Operator SDK installation is documented in detail by the operator-sdk projec
 
 Install the OLM from the operator-sdk, you can use the following command:
 ```bash
-$ operator-sdk olm install
+$ operator-sdk olm install --version 0.20.0
 ...
 ...
 INFO[0079] Successfully installed OLM version "latest"
@@ -38,22 +38,24 @@ $ operator-sdk olm status
 
 Output of the above command
 ```bash
-INFO[0007] Fetching CRDs for version "0.18.1"
-INFO[0007] Fetching resources for resolved version "v0.18.1"
-INFO[0031] Successfully got OLM status for version "0.18.1"
+INFO[0007] Fetching CRDs for version "0.20.0"
+INFO[0007] Fetching resources for resolved version "v0.20.0"
+INFO[0031] Successfully got OLM status for version "0.20.0"
 
 NAME                                            NAMESPACE    KIND                        STATUS
-operators.operators.coreos.com                               CustomResourceDefinition    Installed
 operatorgroups.operators.coreos.com                          CustomResourceDefinition    Installed
 operatorconditions.operators.coreos.com                      CustomResourceDefinition    Installed
+olmconfigs.operators.coreos.com                              CustomResourceDefinition    Installed
 installplans.operators.coreos.com                            CustomResourceDefinition    Installed
 clusterserviceversions.operators.coreos.com                  CustomResourceDefinition    Installed
-olm-operator                                    olm          Deployment                  Installed
 olm-operator-binding-olm                                     ClusterRoleBinding          Installed
 operatorhubio-catalog                           olm          CatalogSource               Installed
 olm-operators                                   olm          OperatorGroup               Installed
 aggregate-olm-view                                           ClusterRole                 Installed
 catalog-operator                                olm          Deployment                  Installed
+cluster                                                      OLMConfig                   Installed
+operators.operators.coreos.com                               CustomResourceDefinition    Installed
+olm-operator                                    olm          Deployment                  Installed
 subscriptions.operators.coreos.com                           CustomResourceDefinition    Installed
 aggregate-olm-edit                                           ClusterRole                 Installed
 olm                                                          Namespace                   Installed
